@@ -1,0 +1,2 @@
+email = "EMAIL"
+token = "TOKEN"

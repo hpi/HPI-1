@@ -1,0 +1,49 @@
+CURRENT_DIR="$(dirname "$(readlink -f "$0")")"
+
+# Super presumptive
+cp -r $CURRENT_DIR/config ~/.config
+cp -r $CURRENT_DIR/secrets ~/.config/my/secrets
+(crontab -l; cat $CURRENT_DIR/crontab) | crontab -
+
+# Set-up
+sudo apt-get update
+sudo apt-get install python3 python3.8-distutils git
+
+curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+python3 get-pip.py
+
+# Reddit exporter
+pip3 install --user git+https://github.com/karlicoss/rexport
+
+# FB Messenger exporter
+#pip3 install --user git+https://github.com/karlicoss/fbmessengerexport
+
+# Goodreads exporter
+#pip3 install --user git+https://github.com/karlicoss/goodrexport
+
+# StackExchange exporter
+pip3 install --user git+https://github.com/karlicoss/stexport
+
+# Pinboard exporter
+#pip3 install --user git+https://github.com/karlicoss/pinbexport
+
+# RescueTime exporter
+#pip3 install --user git+https://github.com/karlicoss/rescuexport
+
+# Spotify exporter
+pip3 install --user git+https://github.com/karlicoss/spotifyexport
+
+# Endomondo exporter
+#pip3 install --user git+https://github.com/karlicoss/endoexport
+
+# Pocket exporter
+#pip3 install --user git+https://github.com/karlicoss/pockexport
+
+# Github exporter
+#pip3 install --user git+https://github.com/karlicoss/ghexport
+
+# Instapaper exporter
+#pip3 install --user git+https://github.com/karlicoss/instapexport
+
+# Hypothes.is exporter
+#pip3 install --user git+https://github.com/karlicoss/hypexport

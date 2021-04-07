@@ -1,0 +1,27 @@
+# Check out https://crontab.guru/ to fiddle with cron expressions
+
+# Run at noon every 7 days
+# 0 12 */7 * * python3 -m rexport.export --secrets /root/secrets/reddit.py
+
+# 0 12 */7 * * python3 -m fbmessengerexport.export --secrets /root/secrets/fbmessenger.py
+
+# 0 12 */7 * * python3 -m goodrexport.export --secrets /root/secrets/goodrexport.py
+
+# 0 12 */7 * * python3 -m stexport.export --secrets /root/secrets/stackexchange.py
+
+# 0 12 */7 * * python3 -m pinbexport.export --secrets /root/secrets/pinboard.py
+
+# 0 12 */7 * * python3 -m rescuexport.export --secrets /root/secrets/rescuetime.py
+
+# 0 12 */7 * * python3 -m spotifyexport.export --secrets /root/secrets/spotify.py
+
+# 0 12 */7 * * python3 -m endoexport.export --secrets /root/secrets/endomondo.py
+
+# 0 12 */7 * * python3 -m pockexport.export --secrets /root/secrets/pocket.py
+
+# 0 12 */7 * * python3 -m ghexport.export --secrets /root/secrets/github.py
+
+# 0 12 */7 * * python3 -m instapexport.export --secrets /root/secrets/instapaper.py
+
+# 0 12 */7 * * python3 -m hypexport.export --secrets /root/secrets/hypothesis.py
+
